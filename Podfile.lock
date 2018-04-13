@@ -1,0 +1,20 @@
+PODS:
+  - Ji (2.1.0):
+    - Ji/Ji (= 2.1.0)
+  - Ji/Ji (2.1.0):
+    - Ji/Ji-libxml
+  - Ji/Ji-libxml (2.1.0)
+
+DEPENDENCIES:
+  - Ji (~> 2.1.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Ji
+
+SPEC CHECKSUMS:
+  Ji: 21946da4e13425485ddd424edfaeeced0d80ad28
+
+PODFILE CHECKSUM: 853ca6cd8122731df5d7742b8feca3796264945c
+
+COCOAPODS: 1.5.0
