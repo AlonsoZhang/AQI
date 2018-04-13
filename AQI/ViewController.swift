@@ -8,12 +8,31 @@
 
 import Cocoa
 import Ji
+import Alamofire
 
 class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let jiDoc = Ji(htmlURL: URL(string: "http://222.92.42.178:8083/AQI/Index.aspx")!)
+        Alamofire.request("http://222.92.42.178:8083/AQI/Index.aspx").responseString { response in
+            if(response.result.isSuccess){
+                self.dealHTML(Str: response.description)
+                //print(response.description)
+            }else{
+                print("Check network")
+            }
+        }
+    }
+
+    override var representedObject: Any? {
+        didSet {
+        // Update the view, if already loaded.
+        }
+    }
+    
+    func dealHTML(Str:String) {
+        let jiDoc = Ji(htmlString: Str, encoding: .utf8)
+        //let jiDoc = Ji(htmlURL: URL(string: "http://222.92.42.178:8083/AQI/Index.aspx")!)
         let spanDate = jiDoc?.xPath("//span[@id='ContentPlaceHolder1_spanDate']")?.first?.content
         print("更新时间:\(spanDate!)")
         let spanAQI = jiDoc?.xPath("//span[@id='ContentPlaceHolder1_spanAQI']")?.first?.content
@@ -28,12 +47,6 @@ class ViewController: NSViewController {
         let spanPrimaryPollutant = jiDoc?.xPath("//span[@id='ContentPlaceHolder1_spanPrimaryPollutant']")?.first?.content
         let spanValue = jiDoc?.xPath("//span[@id='ContentPlaceHolder1_spanValue']")?.first?.content
         print("首要污染物:\(spanPrimaryPollutant!) \(spanValue!)")
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
     }
 
 
