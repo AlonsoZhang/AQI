@@ -7,98 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A295856C82C9BA9BA5853C8B /* Pods_AQI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76566748BD2D683BB3D0D5F /* Pods_AQI.framework */; };
-		E2920D3920807F8700BEA5FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2920D3820807F8700BEA5FC /* AppDelegate.swift */; };
-		E2920D3B20807F8700BEA5FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2920D3A20807F8700BEA5FC /* ViewController.swift */; };
-		E2920D3D20807F8900BEA5FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2920D3C20807F8900BEA5FC /* Assets.xcassets */; };
-		E2920D4020807F8900BEA5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2920D3E20807F8900BEA5FC /* Main.storyboard */; };
+		C4B54713C7C8C7ED68EF096F /* Pods_AQI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 527C7D3538F2D55A1C65B279 /* Pods_AQI.framework */; };
+		E2AE1295208436F600A1B4ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1294208436F600A1B4ED /* AppDelegate.swift */; };
+		E2AE1297208436F800A1B4ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1296208436F800A1B4ED /* Assets.xcassets */; };
+		E2AE129A208436F800A1B4ED /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1298208436F800A1B4ED /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B4F55C75877BB901E2DF8B5 /* Pods-AQI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQI.release.xcconfig"; path = "Pods/Target Support Files/Pods-AQI/Pods-AQI.release.xcconfig"; sourceTree = "<group>"; };
-		B76566748BD2D683BB3D0D5F /* Pods_AQI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AQI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2920D3520807F8700BEA5FC /* AQI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2920D3820807F8700BEA5FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E2920D3A20807F8700BEA5FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E2920D3C20807F8900BEA5FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E2920D3F20807F8900BEA5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E2920D4120807F8900BEA5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2920D4220807F8900BEA5FC /* AQI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AQI.entitlements; sourceTree = "<group>"; };
-		EACA9FD77993D39C5FFDB66F /* Pods-AQI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AQI/Pods-AQI.debug.xcconfig"; sourceTree = "<group>"; };
+		00EB22AF4204661FDBF0DD1E /* Pods-AQI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQI.release.xcconfig"; path = "Pods/Target Support Files/Pods-AQI/Pods-AQI.release.xcconfig"; sourceTree = "<group>"; };
+		527C7D3538F2D55A1C65B279 /* Pods_AQI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AQI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2AE1291208436F600A1B4ED /* AQI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2AE1294208436F600A1B4ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2AE1296208436F800A1B4ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2AE1299208436F800A1B4ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E2AE129B208436F800A1B4ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2AE129C208436F800A1B4ED /* AQI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AQI.entitlements; sourceTree = "<group>"; };
+		EF816FC80224E34754E7CD8B /* Pods-AQI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AQI/Pods-AQI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E2920D3220807F8700BEA5FC /* Frameworks */ = {
+		E2AE128E208436F600A1B4ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A295856C82C9BA9BA5853C8B /* Pods_AQI.framework in Frameworks */,
+				C4B54713C7C8C7ED68EF096F /* Pods_AQI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38BEC919E6DA955D99D77B15 /* Frameworks */ = {
+		280265684605FDB6FF78CFB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B76566748BD2D683BB3D0D5F /* Pods_AQI.framework */,
+				527C7D3538F2D55A1C65B279 /* Pods_AQI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D54DC94ACDCC2F24E173B063 /* Pods */ = {
+		E2AE1288208436F600A1B4ED = {
 			isa = PBXGroup;
 			children = (
-				EACA9FD77993D39C5FFDB66F /* Pods-AQI.debug.xcconfig */,
-				5B4F55C75877BB901E2DF8B5 /* Pods-AQI.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E2920D2C20807F8700BEA5FC = {
-			isa = PBXGroup;
-			children = (
-				E2920D3720807F8700BEA5FC /* AQI */,
-				E2920D3620807F8700BEA5FC /* Products */,
-				D54DC94ACDCC2F24E173B063 /* Pods */,
-				38BEC919E6DA955D99D77B15 /* Frameworks */,
+				E2AE1293208436F600A1B4ED /* AQI */,
+				E2AE1292208436F600A1B4ED /* Products */,
+				F89DA93D5FD3866A3B6444DD /* Pods */,
+				280265684605FDB6FF78CFB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		E2920D3620807F8700BEA5FC /* Products */ = {
+		E2AE1292208436F600A1B4ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E2920D3520807F8700BEA5FC /* AQI.app */,
+				E2AE1291208436F600A1B4ED /* AQI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E2920D3720807F8700BEA5FC /* AQI */ = {
+		E2AE1293208436F600A1B4ED /* AQI */ = {
 			isa = PBXGroup;
 			children = (
-				E2920D3820807F8700BEA5FC /* AppDelegate.swift */,
-				E2920D3A20807F8700BEA5FC /* ViewController.swift */,
-				E2920D3C20807F8900BEA5FC /* Assets.xcassets */,
-				E2920D3E20807F8900BEA5FC /* Main.storyboard */,
-				E2920D4120807F8900BEA5FC /* Info.plist */,
-				E2920D4220807F8900BEA5FC /* AQI.entitlements */,
+				E2AE1294208436F600A1B4ED /* AppDelegate.swift */,
+				E2AE1296208436F800A1B4ED /* Assets.xcassets */,
+				E2AE1298208436F800A1B4ED /* MainMenu.xib */,
+				E2AE129B208436F800A1B4ED /* Info.plist */,
+				E2AE129C208436F800A1B4ED /* AQI.entitlements */,
 			);
 			path = AQI;
+			sourceTree = "<group>";
+		};
+		F89DA93D5FD3866A3B6444DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF816FC80224E34754E7CD8B /* Pods-AQI.debug.xcconfig */,
+				00EB22AF4204661FDBF0DD1E /* Pods-AQI.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E2920D3420807F8700BEA5FC /* AQI */ = {
+		E2AE1290208436F600A1B4ED /* AQI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E2920D4520807F8900BEA5FC /* Build configuration list for PBXNativeTarget "AQI" */;
+			buildConfigurationList = E2AE129F208436F800A1B4ED /* Build configuration list for PBXNativeTarget "AQI" */;
 			buildPhases = (
-				FD03AEC072C0CA8A549FA62E /* [CP] Check Pods Manifest.lock */,
-				E2920D3120807F8700BEA5FC /* Sources */,
-				E2920D3220807F8700BEA5FC /* Frameworks */,
-				E2920D3320807F8700BEA5FC /* Resources */,
-				7A0675C2FF98DA45A79D9740 /* [CP] Embed Pods Frameworks */,
+				A90E3CCCD542E8102F3228AF /* [CP] Check Pods Manifest.lock */,
+				E2AE128D208436F600A1B4ED /* Sources */,
+				E2AE128E208436F600A1B4ED /* Frameworks */,
+				E2AE128F208436F600A1B4ED /* Resources */,
+				77721F4DC7B9481178EAB42C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,20 +103,20 @@
 			);
 			name = AQI;
 			productName = AQI;
-			productReference = E2920D3520807F8700BEA5FC /* AQI.app */;
+			productReference = E2AE1291208436F600A1B4ED /* AQI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E2920D2D20807F8700BEA5FC /* Project object */ = {
+		E2AE1289208436F600A1B4ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Alonso;
 				TargetAttributes = {
-					E2920D3420807F8700BEA5FC = {
+					E2AE1290208436F600A1B4ED = {
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -129,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E2920D3020807F8700BEA5FC /* Build configuration list for PBXProject "AQI" */;
+			buildConfigurationList = E2AE128C208436F600A1B4ED /* Build configuration list for PBXProject "AQI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -137,30 +134,30 @@
 				en,
 				Base,
 			);
-			mainGroup = E2920D2C20807F8700BEA5FC;
-			productRefGroup = E2920D3620807F8700BEA5FC /* Products */;
+			mainGroup = E2AE1288208436F600A1B4ED;
+			productRefGroup = E2AE1292208436F600A1B4ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E2920D3420807F8700BEA5FC /* AQI */,
+				E2AE1290208436F600A1B4ED /* AQI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E2920D3320807F8700BEA5FC /* Resources */ = {
+		E2AE128F208436F600A1B4ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2920D3D20807F8900BEA5FC /* Assets.xcassets in Resources */,
-				E2920D4020807F8900BEA5FC /* Main.storyboard in Resources */,
+				E2AE1297208436F800A1B4ED /* Assets.xcassets in Resources */,
+				E2AE129A208436F800A1B4ED /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7A0675C2FF98DA45A79D9740 /* [CP] Embed Pods Frameworks */ = {
+		77721F4DC7B9481178EAB42C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -180,7 +177,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AQI/Pods-AQI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD03AEC072C0CA8A549FA62E /* [CP] Check Pods Manifest.lock */ = {
+		A90E3CCCD542E8102F3228AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -201,30 +198,29 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E2920D3120807F8700BEA5FC /* Sources */ = {
+		E2AE128D208436F600A1B4ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2920D3B20807F8700BEA5FC /* ViewController.swift in Sources */,
-				E2920D3920807F8700BEA5FC /* AppDelegate.swift in Sources */,
+				E2AE1295208436F600A1B4ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E2920D3E20807F8900BEA5FC /* Main.storyboard */ = {
+		E2AE1298208436F800A1B4ED /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E2920D3F20807F8900BEA5FC /* Base */,
+				E2AE1299208436F800A1B4ED /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E2920D4320807F8900BEA5FC /* Debug */ = {
+		E2AE129D208436F800A1B4ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,7 +280,7 @@
 			};
 			name = Debug;
 		};
-		E2920D4420807F8900BEA5FC /* Release */ = {
+		E2AE129E208436F800A1B4ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -337,9 +333,9 @@
 			};
 			name = Release;
 		};
-		E2920D4620807F8900BEA5FC /* Debug */ = {
+		E2AE12A0208436F800A1B4ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EACA9FD77993D39C5FFDB66F /* Pods-AQI.debug.xcconfig */;
+			baseConfigurationReference = EF816FC80224E34754E7CD8B /* Pods-AQI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -347,7 +343,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8LP5KW6GHL;
 				INFOPLIST_FILE = AQI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wistron.AQI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -355,9 +354,9 @@
 			};
 			name = Debug;
 		};
-		E2920D4720807F8900BEA5FC /* Release */ = {
+		E2AE12A1208436F800A1B4ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B4F55C75877BB901E2DF8B5 /* Pods-AQI.release.xcconfig */;
+			baseConfigurationReference = 00EB22AF4204661FDBF0DD1E /* Pods-AQI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -365,7 +364,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8LP5KW6GHL;
 				INFOPLIST_FILE = AQI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wistron.AQI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -376,25 +378,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E2920D3020807F8700BEA5FC /* Build configuration list for PBXProject "AQI" */ = {
+		E2AE128C208436F600A1B4ED /* Build configuration list for PBXProject "AQI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2920D4320807F8900BEA5FC /* Debug */,
-				E2920D4420807F8900BEA5FC /* Release */,
+				E2AE129D208436F800A1B4ED /* Debug */,
+				E2AE129E208436F800A1B4ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2920D4520807F8900BEA5FC /* Build configuration list for PBXNativeTarget "AQI" */ = {
+		E2AE129F208436F800A1B4ED /* Build configuration list for PBXNativeTarget "AQI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2920D4620807F8900BEA5FC /* Debug */,
-				E2920D4720807F8900BEA5FC /* Release */,
+				E2AE12A0208436F800A1B4ED /* Debug */,
+				E2AE12A1208436F800A1B4ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E2920D2D20807F8700BEA5FC /* Project object */;
+	rootObject = E2AE1289208436F600A1B4ED /* Project object */;
 }
