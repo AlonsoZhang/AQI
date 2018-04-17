@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C4B54713C7C8C7ED68EF096F /* Pods_AQI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 527C7D3538F2D55A1C65B279 /* Pods_AQI.framework */; };
+		E256D8A72085D1B80064A5F7 /* kaola.png in Resources */ = {isa = PBXBuildFile; fileRef = E256D8A62085D1B80064A5F7 /* kaola.png */; };
 		E2AE1295208436F600A1B4ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE1294208436F600A1B4ED /* AppDelegate.swift */; };
 		E2AE1297208436F800A1B4ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1296208436F800A1B4ED /* Assets.xcassets */; };
 		E2AE129A208436F800A1B4ED /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AE1298208436F800A1B4ED /* MainMenu.xib */; };
@@ -16,6 +17,7 @@
 /* Begin PBXFileReference section */
 		00EB22AF4204661FDBF0DD1E /* Pods-AQI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQI.release.xcconfig"; path = "Pods/Target Support Files/Pods-AQI/Pods-AQI.release.xcconfig"; sourceTree = "<group>"; };
 		527C7D3538F2D55A1C65B279 /* Pods_AQI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AQI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E256D8A62085D1B80064A5F7 /* kaola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kaola.png; sourceTree = "<group>"; };
 		E2AE1291208436F600A1B4ED /* AQI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2AE1294208436F600A1B4ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2AE1296208436F800A1B4ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				E2AE1298208436F800A1B4ED /* MainMenu.xib */,
 				E2AE129B208436F800A1B4ED /* Info.plist */,
 				E2AE129C208436F800A1B4ED /* AQI.entitlements */,
+				E256D8A62085D1B80064A5F7 /* kaola.png */,
 			);
 			path = AQI;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2AE1297208436F800A1B4ED /* Assets.xcassets in Resources */,
+				E256D8A72085D1B80064A5F7 /* kaola.png in Resources */,
 				E2AE129A208436F800A1B4ED /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -325,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -347,6 +351,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = wistron.AQI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -368,6 +373,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = wistron.AQI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
