@@ -4,6 +4,8 @@
 <dict>
 	<key>NSUserNotificationAlertStyle</key>
 	<string>alert</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>是否允许此App使用日历？</string>
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

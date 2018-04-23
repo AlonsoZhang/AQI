@@ -9,6 +9,7 @@
 import Cocoa
 import Ji
 import Alamofire
+import EventKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -17,8 +18,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let dateFormatter = DateFormatter()
     var spanAQI = ""
     var weather = ""
+    var notititle = ""
+    var notiinfo = ""
     let greenColor = NSColor(calibratedRed: 0.3, green: 0.9, blue: 0, alpha: 0.6)
     let blueColor = NSColor(calibratedRed: 0.1, green: 0.3, blue: 1, alpha: 0.9)
+    let userDefault = UserDefaults.standard
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.button?.title = "☁️"
         statusItem.menu = NSMenu()
@@ -30,12 +35,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if hourFormatter.string(from: Date()) == "00:00"{
                 self.refreshMenu()
             }
-            if self.dateFormatter.string(from: Date()) == "16:00:00"{
+            if self.dateFormatter.string(from: Date()) == "16:27:00"{
                 self.judgehealth()
             }
         }
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
@@ -53,6 +58,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     if let _ = response.response{
                         let str = String(data:response.data!, encoding: .utf8)!
                         self.dealWEAHTML(Str: str)
+                        let calendarItem = NSMenuItem(title: "自动添加到日历", action: #selector(self.autoAddToCalendar), keyEquivalent: "")
+                        if let boolValue = self.userDefault.string(forKey: "AddCalender") {
+                            if boolValue == "YES"{
+                                calendarItem.state = NSControl.StateValue(rawValue: 1)
+                            }else{
+                                calendarItem.state = NSControl.StateValue(rawValue: 0)
+                            }
+                        }
+                        self.statusItem.menu?.addItem(calendarItem)
                         let quitItem = NSMenuItem(title: "退出", action: #selector(self.quit), keyEquivalent: "")
                         self.statusItem.menu?.addItem(quitItem)
                     }else{
@@ -74,8 +88,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func quit() {
         NSApp.terminate(self)
     }
-
+    
     @objc func refresh() {
+        refreshMenu()
+    }
+    
+    @objc func autoAddToCalendar(){
+        if let boolValue = self.userDefault.string(forKey: "AddCalender") {
+            if boolValue == "YES"{
+                userDefault.set("NO", forKey: "AddCalender")
+            }else{
+                userDefault.set("YES", forKey: "AddCalender")
+            }
+        }else{
+            userDefault.set("YES", forKey: "AddCalender")
+        }
         refreshMenu()
     }
     
@@ -174,14 +201,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func judgehealth(){
-        var notititle = ""
-        var notiinfo = ""
         if let aqi = Int(spanAQI){
             if aqi > 0 && aqi < 150{
                 if weather.contains("雨")||weather.contains("雷"){
                     notititle = "天气不佳，今晚不宜运动"
+                    let boolValue = self.userDefault.string(forKey: "AddCalender")
+                    if boolValue == "YES"{
+                        addToCalendar()
+                    }else{
+                        print("不添加")
+                    }
                 }else{
-                    notititle = "今晚适宜跑步，加油"
+                    notititle = "今晚跑步"
+                    let boolValue = self.userDefault.string(forKey: "AddCalender")
+                    if boolValue == "YES"{
+                        addToCalendar()
+                    }else{
+                        print("不添加")
+                    }
                 }
             }else{
                 notititle = "污染严重，今晚不宜运动"
@@ -194,17 +231,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func startLocalNotification(title:String,info:String) {
         let notification = NSUserNotification()
         notification.title = title
-        notification.hasActionButton = true
+        notification.hasActionButton = false
         notification.actionButtonTitle = "Fighting"
-        notification.otherButtonTitle = "Give Up"
+        //notification.otherButtonTitle = "Give Up"
         notification.informativeText = info
         notification.deliveryDate = Date()
         notification.setValue(NSImage(named: NSImage.Name(rawValue: "kaola")), forKey: "_identityImage")
-
+        
         // Notification定时显示，最短60s
-//        var dateComponents = DateComponents()
-//        dateComponents.second = 70
-//        notification.deliveryRepeatInterval = dateComponents
+        //        var dateComponents = DateComponents()
+        //        dateComponents.second = 70
+        //        notification.deliveryRepeatInterval = dateComponents
         
         NSUserNotificationCenter.default.delegate = self
         NSUserNotificationCenter.default.scheduleNotification(notification)
@@ -213,9 +250,48 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //NSUserNotificationCenter.default.removeAllDeliveredNotifications()
         
         //注销后台运行的Notification
-//        for notify in NSUserNotificationCenter.default.scheduledNotifications{
-//            NSUserNotificationCenter.default.removeScheduledNotification(notify)
-//        }
+        //        for notify in NSUserNotificationCenter.default.scheduledNotifications{
+        //            NSUserNotificationCenter.default.removeScheduledNotification(notify)
+        //        }
+    }
+    
+    func addToCalendar()
+    {
+        let eventStore = EKEventStore()
+        eventStore.requestAccess(to: .event, completion: { (granted, error) in
+            do {
+                if((error) != nil)
+                {
+                    //添加错误
+                    print("Error")
+                }
+                else if(!granted)
+                {
+                    //无访问日历权限
+                    print("无访问日历权限")
+                }
+                else
+                {
+                    let event = EKEvent(eventStore: eventStore)
+                    event.title = self.notititle
+                    event.location = self.notiinfo
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "yyyy-MM-dd HH:mm"
+                    let dateformatter = DateFormatter()
+                    dateformatter.dateFormat = "yyyy-MM-dd"
+                    let today = dateformatter.string(from: Date())
+                    let startTime = formatter.date(from: "\(today) 19:30")
+                    let endTime = formatter.date(from: "\(today) 20:30")
+                    event.startDate = startTime!
+                    event.endDate = endTime!
+                    event.calendar = eventStore.defaultCalendarForNewEvents
+                    try eventStore.save(event, span:EKSpan.thisEvent, commit: true)
+                }
+            }
+            catch {
+                print(error)
+            }
+        })
     }
 }
 
