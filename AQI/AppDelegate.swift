@@ -35,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if hourFormatter.string(from: Date()) == "00:00"{
                 self.refreshMenu()
             }
-            if self.dateFormatter.string(from: Date()) == "16:27:00"{
+            if self.dateFormatter.string(from: Date()) == "16:00:00"{
                 self.judgehealth()
             }
         }
@@ -205,19 +205,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if aqi > 0 && aqi < 150{
                 if weather.contains("雨")||weather.contains("雷"){
                     notititle = "天气不佳，今晚不宜运动"
-                    let boolValue = self.userDefault.string(forKey: "AddCalender")
-                    if boolValue == "YES"{
-                        addToCalendar()
-                    }else{
-                        print("不添加")
-                    }
                 }else{
                     notititle = "今晚跑步"
                     let boolValue = self.userDefault.string(forKey: "AddCalender")
                     if boolValue == "YES"{
                         addToCalendar()
-                    }else{
-                        print("不添加")
                     }
                 }
             }else{
@@ -298,7 +290,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 extension AppDelegate: NSUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: NSUserNotificationCenter, didDeliver notification: NSUserNotification) {
-        print("didDeliver notification \(notification)")
+        //print("didDeliver notification \(notification)")
     }
     
     func userNotificationCenter(_ center: NSUserNotificationCenter, didActivate notification: NSUserNotification) {
