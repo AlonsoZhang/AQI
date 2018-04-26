@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var weather = ""
     var notititle = ""
     var notiinfo = ""
+    var addCalender = false
     let greenColor = NSColor(calibratedRed: 0.3, green: 0.9, blue: 0, alpha: 0.6)
     let blueColor = NSColor(calibratedRed: 0.1, green: 0.3, blue: 1, alpha: 0.9)
     let userDefault = UserDefaults.standard
@@ -37,6 +38,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             if self.dateFormatter.string(from: Date()) == "16:00:00"{
                 self.judgehealth()
+            }
+            if self.dateFormatter.string(from: Date()) == "16:05:00"{
+                if self.addCalender{
+                    self.addToCalendar()
+                    self.addCalender = false
+                }
             }
         }
     }
@@ -209,7 +216,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     notititle = "今晚跑步"
                     let boolValue = self.userDefault.string(forKey: "AddCalender")
                     if boolValue == "YES"{
-                        addToCalendar()
+                        addCalender = true
                     }
                 }
             }else{
