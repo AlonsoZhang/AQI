@@ -36,10 +36,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if hourFormatter.string(from: Date()) == "00:00"{
                 self.refreshMenu()
             }
-            if self.dateFormatter.string(from: Date()) == "16:00:00"{
+            if self.dateFormatter.string(from: Date()) == "16:01:00"{
                 self.judgehealth()
             }
-            if self.dateFormatter.string(from: Date()) == "16:05:00"{
+            if self.dateFormatter.string(from: Date()) == "16:02:00"{
                 if self.addCalender{
                     self.addToCalendar()
                     self.addCalender = false
